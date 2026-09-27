@@ -1,0 +1,10 @@
+{
+  "description": "Streamline college life with a comprehensive platform that consolidates academics, deadlines, attendance, and personal tasks into one efficient workspace.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

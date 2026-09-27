@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="<!-- figma:lang -->">
+  <head>
+    <!-- figma:head-start -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><!-- figma:title --></title>
+    <title>Student OS</title>
+    <script>
+      // Apply theme before render to prevent flash
+      (function() {
+        try {
+          var settings = localStorage.getItem('sos_settings');
+          if (settings) {
+            var arr = JSON.parse(settings);
+            if (arr && arr.length > 0 && arr[0].theme) {
+              document.documentElement.classList.toggle('dark', arr[0].theme === 'dark');
+              return;
+            }
+          }
+        } catch(e) {}
+        // Default: dark mode
+        document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <!-- figma:head-end -->
+  </head>
+  <body>
+    <!-- figma:body-start -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- figma:body-end -->
+  </body>
+</html>
